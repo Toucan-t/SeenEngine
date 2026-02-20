@@ -1,6 +1,7 @@
 import * as THREE from "three";
 
 export function createPlayerCamera() {
+  const topmode = false;
   const camera = new THREE.PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,

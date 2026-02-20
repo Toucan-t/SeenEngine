@@ -13,7 +13,8 @@ document.body.appendChild(renderer.domElement);
 
 const controls = createPlayerControls(camera, renderer);
 const geometry = loadGeometry();
-scene.add(geometry);
+scene.add(geometry[0]);
+scene.add(geometry[1]);
 
 function animate(time) {
   renderer.render(scene, camera);
