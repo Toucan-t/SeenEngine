@@ -1,8 +1,7 @@
 import * as THREE from "three";
 
 export function loadGeometry() {
-  const geometry = new THREE.PlaneGeometry(2, 2);
-  const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-  const plane = new THREE.Mesh(geometry, material);
-  return plane;
+  const plane = new THREE.Plane(new THREE.Vector3(1, 0, 0));
+  const helper = new THREE.PlaneHelper(plane, 1, 0xffff00);
+  return helper;
 }

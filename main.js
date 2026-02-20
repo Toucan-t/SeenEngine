@@ -15,8 +15,6 @@ const controls = createPlayerControls(camera, renderer);
 const geometry = loadGeometry();
 scene.add(geometry);
 
-camera.position.z = 5;
-
 function animate(time) {
   renderer.render(scene, camera);
 }
