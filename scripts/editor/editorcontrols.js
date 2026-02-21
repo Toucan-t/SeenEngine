@@ -1,8 +1,8 @@
 import * as THREE from "three";
 import { PointerLockControls } from "three/examples/jsm/controls/PointerLockControls.js";
-import { createPlayerCamera } from "./playercamera.js";
+import { createEditorCamera } from "./editorcamera.js";
 
-export function createPlayerControls(camera, renderer) {
+export function createEditorControls(camera, renderer) {
   const controls = new PointerLockControls(camera, renderer.domElement);
   const playerspeed = 0.1;
 
@@ -25,15 +25,15 @@ export function createPlayerControls(camera, renderer) {
           camera.position.y = 50;
           camera.topmode = true;
         } else if (camera.topmode) {
-          camera.position.y = 0;
+          camera.position.y = 1;
           camera.topmode = false;
         }
         break;
       case "KeyE":
-        camera.position.y += 10;
+        camera.position.y += 2;
         break;
       case "KeyR":
-        camera.position.y -= 10;
+        camera.position.y -= 2;
         break;
     }
   });
